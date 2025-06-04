@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Evento Tech Future 2025: IA, Blockchain, Ciberseguridad y más." />
+  <meta property="og:title" content="Tech Future 2025" />
+  <meta property="og:description" content="Conéctate al futuro de la tecnología." />
+  <meta property="og:image" content="img/og-image.jpg" />
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Swiper CSS -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  />
+
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Tech Future 2025 | El Futuro es Hoy</title>
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <h1>Tech Future 2025</h1>
+
+      <!-- Menu toggle checkbox for hamburger -->
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="header__menu">
+        <ul>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#speakers">Speakers</a></li>
+          <li><a href="#registro">Registro</a></li>
+          <li>
+            <!-- Botón modo oscuro -->
+            <button id="toggle-theme" aria-label="Cambiar tema">🌙</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" data-aos="fade-up">
+    <div class="hero__content">
+      <h2>Conéctate al futuro de la tecnología</h2>
+      <p>Únete al evento donde la innovación cobra vida.</p>
+      <a href="#registro" class="boton boton--primario">Regístrate Ahora</a>
+    </div>
+  </section>
+
+  <section class="countdown" id="cuenta-regresiva" data-aos="fade-up">
+    <h2>Faltan:</h2>
+    <div class="countdown__reloj">
+      <span id="dias">00</span>D :
+      <span id="horas">00</span>H :
+      <span id="minutos">00</span>M :
+      <span id="segundos">00</span>S
+    </div>
+  </section>
+
+  <section class="agenda" id="agenda" data-aos="fade-up">
+    <h2 class="agenda__titulo">Agenda del Evento</h2>
+    <ul class="agenda__lista">
+      <li><strong>10:00 AM</strong> - Bienvenida y apertura</li>
+      <li><strong>11:00 AM</strong> - Charla: Futuro de la IA</li>
+      <li><strong>01:00 PM</strong> - Panel: Mujeres en la tecnología</li>
+      <li><strong>03:00 PM</strong> - Taller: Seguridad en la nube</li>
+    </ul>
+  </section>
+
+  <section class="speakers" id="speakers" data-aos="fade-up">
+    <h2>Conferencistas</h2>
+    <div class="speakers__grid">
+      <article class="speaker">
+        <img src="imagenes/ana.jpeg" alt="Foto de Ana Pérez" />
+        <h3>Ana Pérez</h3>
+        <p>CTO en FutureTech</p>
+      </article>
+      <article class="speaker">
+        <img src="imagenes/luis.jpeg" alt="Foto de Luis Gómez" />
+        <h3>Luis Gómez</h3>
+        <p>Especialista en Blockchain</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="testimonios" data-aos="fade-up">
+    <h2>Testimonios</h2>
+
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide testimonial">
+          <p>“Increíble experiencia. Aprendí muchísimo.”</p>
+          <strong>- Carla M.</strong>
+        </div>
+        <div class="swiper-slide testimonial">
+          <p>“Un evento que realmente conecta con el futuro.”</p>
+          <strong>- Miguel R.</strong>
+        </div>
+        <div class="swiper-slide testimonial">
+          <p>“Repetiría sin dudarlo. Gran organización.”</p>
+          <strong>- Laura C.</strong>
+        </div>
+      </div>
+      <!-- Paginación -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section class="registro" id="registro" data-aos="fade-up">
+    <h2>Formulario de Registro</h2>
+    <form class="formulario">
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" required />
+
+      <label for="ticket">Tipo de ticket</label>
+      <select id="ticket" name="ticket" required>
+        <option value="">Selecciona una opción</option>
+        <option value="general">General</option>
+        <option value="vip">VIP</option>
+        <option value="estudiante">Estudiante</option>
+      </select>
+
+      <button type="submit" class="boton boton--secundario">Enviar</button>
+    </form>
+  </section>
+
+  <section class="patrocinadores" data-aos="fade-up">
+    <h2>Con el apoyo de</h2>
+    <div class="patrocinadores__logos">
+      <img src="imagenes/descarga.jpeg" alt="Google" />
+      <img src="imagenes/descarga.png" alt="Microsoft" />
+      <img src="imagenes/images.png" alt="AWS" />
+    </div>
+  </section>
+
+  <footer class="footer" data-aos="fade-up">
+    <p>© 2025 Tech Future. Todos los derechos reservados.</p>
+    <div class="footer__links">
+      <a href="#">Términos y condiciones</a> |
+      <a href="#">Política de privacidad</a>
+    </div>
+    <div class="footer__social">
+      <a href="#"><img src="imagenes/fb.png" alt="Facebook" /></a>
+      <br>
+      <a href="#"><img src="imagenes/tw.png" alt="Twitter" /></a>
+      <br>
+      <a href="#"><img src="imagenes/linkedlin.png" alt="LinkedIn" /></a>
+    </div>
+  </footer>
+
+  <!-- Botón subir arriba -->
+  <button id="btn-up" title="Subir arriba">⬆️</button>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
